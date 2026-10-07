@@ -1,0 +1,2609 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rus tili va Ingliz tili bo'yicha 20 tadan interaktiv testlar platformasi. Taymer, o'rganish va imtihon rejimi, batafsil tahlil va sertifikat!">
+    <title>Til Bilimlari Sinovi | Rus Tili va Ingliz Tili (20 Test)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-en: #4f46e5;
+            --primary-en-hover: #4338ca;
+            --primary-en-glow: rgba(79, 70, 229, 0.35);
+            
+            --primary-ru: #e11d48;
+            --primary-ru-hover: #be123c;
+            --primary-ru-glow: rgba(225, 29, 72, 0.35);
+
+            --accent: #06b6d4;
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.3);
+            --danger: #ef4444;
+            --danger-glow: rgba(239, 68, 68, 0.3);
+            --warning: #f59e0b;
+
+            /* Dark Theme (Default) */
+            --bg-base: #090d16;
+            --bg-gradient: radial-gradient(circle at 10% 20%, #17153b 0%, #0d111e 40%, #060913 100%);
+            --card-bg: rgba(22, 28, 45, 0.75);
+            --card-bg-solid: #161c2d;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-border-hover: rgba(99, 102, 241, 0.4);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --option-bg: rgba(30, 41, 59, 0.6);
+            --option-border: rgba(255, 255, 255, 0.07);
+            --option-hover: rgba(99, 102, 241, 0.15);
+            --header-glass: rgba(13, 17, 30, 0.85);
+            --shadow-card: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+            --radius-xl: 24px;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
+
+        body.light-theme {
+            --bg-base: #f1f5f9;
+            --bg-gradient: radial-gradient(circle at 15% 15%, #e0e7ff 0%, #f8fafc 50%, #e2e8f0 100%);
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --card-bg-solid: #ffffff;
+            --card-border: rgba(99, 102, 241, 0.15);
+            --card-border-hover: rgba(99, 102, 241, 0.5);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --option-bg: #f8fafc;
+            --option-border: #e2e8f0;
+            --option-hover: #eef2ff;
+            --header-glass: rgba(255, 255, 255, 0.85);
+            --shadow-card: 0 16px 40px -10px rgba(99, 102, 241, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            background-color: var(--bg-base);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* Glassmorphism helpers */
+        .glass-panel {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-card);
+            border-radius: var(--radius-xl);
+        }
+
+        /* Top Navigation Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--header-glass);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #4f46e5 0%, #e11d48 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+        }
+
+        .brand-text h1 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #818cf8, #f43f5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-text span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1.1rem;
+        }
+
+        .icon-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--card-border-hover);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1040px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+            flex: 1;
+        }
+
+        /* Screen Transitions */
+        .view-section {
+            display: none;
+            animation: fadeIn 0.35s ease forwards;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* HOME / WELCOME SCREEN */
+        .hero-banner {
+            text-align: center;
+            padding: 32px 20px 24px;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #818cf8;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .hero-title span.grad-en {
+            background: linear-gradient(135deg, #6366f1, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-title span.grad-ru {
+            background: linear-gradient(135deg, #f43f5e, #fb923c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        /* User Profile & Config Card */
+        .user-config-card {
+            max-width: 680px;
+            margin: 0 auto 36px;
+            padding: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .custom-input {
+            width: 100%;
+            background: var(--option-bg);
+            border: 1px solid var(--option-border);
+            color: var(--text-primary);
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .custom-input:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Mode Selector Radios */
+        .mode-toggle-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .mode-option-btn {
+            background: var(--option-bg);
+            border: 1px solid var(--option-border);
+            padding: 12px 14px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .mode-option-btn:hover {
+            border-color: var(--card-border-hover);
+            transform: translateY(-2px);
+        }
+
+        .mode-option-btn.selected {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.12);
+        }
+
+        .mode-option-btn .icon {
+            font-size: 1.4rem;
+        }
+
+        .mode-option-btn .text strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .mode-option-btn .text span {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* Subject Cards */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+
+        .subject-card {
+            position: relative;
+            padding: 28px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .subject-card.english {
+            border-top: 4px solid #6366f1;
+        }
+
+        .subject-card.english:hover {
+            box-shadow: 0 20px 40px -10px var(--primary-en-glow);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+
+        .subject-card.russian {
+            border-top: 4px solid #f43f5e;
+        }
+
+        .subject-card.russian:hover {
+            box-shadow: 0 20px 40px -10px var(--primary-ru-glow);
+            border-color: rgba(244, 63, 94, 0.5);
+        }
+
+        .card-header-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .subject-card.english .card-header-icon {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(56, 189, 248, 0.2));
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .subject-card.russian .card-header-icon {
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.2), rgba(251, 146, 60, 0.2));
+            color: #fb7185;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .subject-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .subject-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .features-list li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .features-list li span {
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .btn-start-subject {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.25s ease;
+            color: #fff;
+        }
+
+        .subject-card.english .btn-start-subject {
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+            box-shadow: 0 8px 20px -4px var(--primary-en-glow);
+        }
+
+        .subject-card.english .btn-start-subject:hover {
+            opacity: 0.95;
+            transform: scale(1.02);
+        }
+
+        .subject-card.russian .btn-start-subject {
+            background: linear-gradient(135deg, #e11d48 0%, #ea580c 100%);
+            box-shadow: 0 8px 20px -4px var(--primary-ru-glow);
+        }
+
+        .subject-card.russian .btn-start-subject:hover {
+            opacity: 0.95;
+            transform: scale(1.02);
+        }
+
+        /* Combined 40 Questions Option */
+        .mixed-test-banner {
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            border: 1px dashed rgba(99, 102, 241, 0.4);
+            margin-bottom: 40px;
+        }
+
+        .mixed-info h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .mixed-info p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-mixed {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            border: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-mixed:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+
+        /* QUIZ SCREEN */
+        .quiz-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px 22px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .subject-badge {
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .subject-badge.en {
+            background: rgba(99, 102, 241, 0.2);
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.35);
+        }
+
+        .subject-badge.ru {
+            background: rgba(244, 63, 94, 0.2);
+            color: #fb7185;
+            border: 1px solid rgba(244, 63, 94, 0.35);
+        }
+
+        .subject-badge.mixed {
+            background: rgba(168, 85, 247, 0.2);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+
+        .timer-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: var(--option-bg);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--option-border);
+            color: var(--text-primary);
+        }
+
+        .timer-box.warning {
+            color: var(--danger);
+            border-color: rgba(239, 68, 68, 0.4);
+            animation: pulseTimer 1s infinite;
+        }
+
+        @keyframes pulseTimer {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .btn-finish-early {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-finish-early:hover {
+            background: var(--danger);
+            color: #fff;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: var(--option-bg);
+            border-radius: 999px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #6366f1, #ec4899);
+            border-radius: 999px;
+            transition: width 0.35s ease;
+        }
+
+        /* Question Navigation Palette */
+        .palette-container {
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .palette-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+            gap: 8px;
+        }
+
+        .pal-btn {
+            aspect-ratio: 1;
+            border-radius: var(--radius-sm);
+            background: var(--option-bg);
+            border: 1px solid var(--option-border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .pal-btn:hover {
+            border-color: var(--card-border-hover);
+            color: var(--text-primary);
+        }
+
+        .pal-btn.active {
+            outline: 2px solid #818cf8;
+            outline-offset: 2px;
+            color: #fff;
+        }
+
+        .pal-btn.answered {
+            background: rgba(99, 102, 241, 0.35);
+            border-color: #6366f1;
+            color: #fff;
+        }
+
+        .pal-btn.correct {
+            background: rgba(16, 185, 129, 0.35);
+            border-color: #10b981;
+            color: #fff;
+        }
+
+        .pal-btn.wrong {
+            background: rgba(239, 68, 68, 0.35);
+            border-color: #ef4444;
+            color: #fff;
+        }
+
+        /* Question Card */
+        .question-card {
+            padding: 32px 28px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .q-number-tag {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #818cf8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .q-text {
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.45;
+            margin-bottom: 28px;
+            color: var(--text-primary);
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            background: var(--option-bg);
+            border: 1px solid var(--option-border);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+            position: relative;
+        }
+
+        .option-item:hover:not(.locked) {
+            background: var(--option-hover);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateX(4px);
+        }
+
+        .option-letter {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-right: 16px;
+            flex-shrink: 0;
+            color: var(--text-secondary);
+            border: 1px solid var(--option-border);
+            transition: all 0.2s;
+        }
+
+        .option-text {
+            font-size: 1.02rem;
+            color: var(--text-primary);
+            flex: 1;
+            font-weight: 500;
+        }
+
+        /* Option selected states */
+        .option-item.selected {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.15);
+        }
+
+        .option-item.selected .option-letter {
+            background: #6366f1;
+            color: #fff;
+            border-color: #6366f1;
+        }
+
+        .option-item.correct {
+            border-color: var(--success) !important;
+            background: rgba(16, 185, 129, 0.16) !important;
+        }
+
+        .option-item.correct .option-letter {
+            background: var(--success);
+            color: #fff;
+            border-color: var(--success);
+        }
+
+        .option-item.wrong {
+            border-color: var(--danger) !important;
+            background: rgba(239, 68, 68, 0.16) !important;
+        }
+
+        .option-item.wrong .option-letter {
+            background: var(--danger);
+            color: #fff;
+            border-color: var(--danger);
+        }
+
+        /* Explanation box (Study mode or post-review) */
+        .explanation-box {
+            display: none;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+            background: rgba(15, 23, 42, 0.7);
+            border-left: 4px solid #6366f1;
+            margin-top: 16px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            animation: fadeIn 0.25s ease;
+        }
+
+        .explanation-box strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .explanation-box.visible {
+            display: block;
+        }
+
+        /* Quiz navigation buttons */
+        .quiz-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-top: 8px;
+        }
+
+        .btn-nav {
+            padding: 12px 22px;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid var(--card-border);
+            background: var(--option-bg);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-nav:hover:not(:disabled) {
+            border-color: var(--card-border-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-nav:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .btn-next-action {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            border: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-next-action:hover:not(:disabled) {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+
+        /* RESULTS SCREEN */
+        .results-container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .results-hero-card {
+            text-align: center;
+            padding: 40px 24px;
+            margin-bottom: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .score-circle-wrapper {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 24px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .score-circle-svg {
+            transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
+        }
+
+        .score-circle-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.08);
+            stroke-width: 10;
+        }
+
+        .score-circle-fill {
+            fill: none;
+            stroke: url(#scoreGrad);
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-dasharray: 377;
+            stroke-dashoffset: 377;
+            transition: stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .score-circle-content {
+            position: absolute;
+            text-align: center;
+        }
+
+        .score-circle-content .num {
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .score-circle-content .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .student-honor-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .student-honor-desc {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+        }
+
+        /* Stat Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .stat-card {
+            background: var(--option-bg);
+            border: 1px solid var(--option-border);
+            padding: 16px 12px;
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+
+        .stat-card .val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 4px;
+        }
+
+        .stat-card .lbl {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .stat-card.correct .val { color: var(--success); }
+        .stat-card.wrong .val { color: var(--danger); }
+        .stat-card.time .val { color: var(--warning); }
+        .stat-card.accuracy .val { color: #818cf8; }
+
+        /* Action Buttons */
+        .result-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .btn-action-primary {
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            border: none;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+            transition: all 0.2s;
+        }
+
+        .btn-action-primary:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+
+        .btn-action-secondary {
+            background: var(--option-bg);
+            border: 1px solid var(--option-border);
+            color: var(--text-primary);
+            padding: 14px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-action-secondary:hover {
+            border-color: var(--card-border-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Review Breakdown Section */
+        .review-section {
+            margin-top: 36px;
+        }
+
+        .review-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .filter-btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            background: var(--option-bg);
+            border: 1px solid var(--option-border);
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active {
+            background: #6366f1;
+            color: #fff;
+            border-color: #6366f1;
+        }
+
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .review-card {
+            padding: 22px;
+            border-radius: var(--radius-md);
+            background: var(--card-bg-solid);
+            border: 1px solid var(--card-border);
+            border-left: 5px solid #6366f1;
+        }
+
+        .review-card.is-correct {
+            border-left-color: var(--success);
+        }
+
+        .review-card.is-wrong {
+            border-left-color: var(--danger);
+        }
+
+        .review-card .rq-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .review-card .rq-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .review-answer-pill {
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .review-answer-pill.user-ans {
+            background: rgba(239, 68, 68, 0.12);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.25);
+        }
+
+        .review-answer-pill.user-ans.correct {
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .review-answer-pill.correct-ans {
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .review-expl {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--option-border);
+            line-height: 1.5;
+        }
+
+        /* CERTIFICATE MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .cert-container {
+            width: 100%;
+            max-width: 780px;
+            background: #fff;
+            color: #0f172a;
+            border-radius: var(--radius-lg);
+            padding: 36px 40px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            position: relative;
+            border: 10px solid #f1f5f9;
+            outline: 2px dashed #cbd5e1;
+            outline-offset: -12px;
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.92); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .cert-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4f46e5, #e11d48);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 4px 16px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+        }
+
+        .cert-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #1e1b4b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .cert-subtitle {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .cert-body {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .cert-present-to {
+            font-size: 0.9rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+
+        .cert-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #4338ca;
+            border-bottom: 2px solid #e2e8f0;
+            display: inline-block;
+            padding: 0 30px 8px;
+            margin-bottom: 16px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .cert-statement {
+            font-size: 1.05rem;
+            color: #334155;
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .cert-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 24px;
+        }
+
+        .cert-meta-item {
+            text-align: left;
+        }
+
+        .cert-meta-item.center {
+            text-align: center;
+        }
+
+        .cert-meta-item.right {
+            text-align: right;
+        }
+
+        .cert-meta-item .val {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #0f172a;
+        }
+
+        .cert-meta-item .lbl {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+
+        .cert-seal {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 16px rgba(217, 119, 6, 0.4);
+            margin: 0 auto;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #f1f5f9;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close-btn:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+        .cert-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn-print {
+            background: #4f46e5;
+            color: #fff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-print:hover {
+            background: #4338ca;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificateModal, #certificateModal * {
+                visibility: visible;
+            }
+            #certificateModal {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                padding: 0;
+            }
+            .cert-container {
+                box-shadow: none;
+                max-width: 100%;
+                width: 100%;
+                border: 6px solid #e2e8f0;
+            }
+            .modal-close-btn, .cert-controls {
+                display: none !important;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 1.8rem; }
+            .mode-toggle-group { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .quiz-top-bar { flex-direction: column; align-items: stretch; }
+            .quiz-meta { justify-content: space-between; }
+            .cert-container { padding: 24px 20px; }
+            .cert-title { font-size: 1.6rem; }
+            .cert-name { font-size: 1.6rem; }
+            .cert-footer { flex-direction: column; gap: 14px; text-align: center; }
+            .cert-meta-item, .cert-meta-item.right { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SVG Definitions for Gradients -->
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <defs>
+            <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4f46e5" />
+                <stop offset="50%" stop-color="#8b5cf6" />
+                <stop offset="100%" stop-color="#10b981" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="brand-logo" onclick="app.showHome()">
+            <div class="brand-icon">🌐</div>
+            <div class="brand-text">
+                <h1>Til Bilimlari Sinovi</h1>
+                <span>Rus tili & Ingliz tili Test Platformasi</span>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="soundToggleBtn" onclick="app.toggleSound()" title="Ovozni yoqish / o'chirish">
+                <span id="soundIcon">🔊</span>
+            </button>
+            <button class="icon-btn" id="themeToggleBtn" onclick="app.toggleTheme()" title="Yorug' / Qorong'u rejim">
+                <span id="themeIcon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- ================= 1. HOME SCREEN ================= -->
+        <section id="viewHome" class="view-section active">
+            <div class="hero-banner">
+                <div class="badge-pill">
+                    <span>⚡</span> 20 ta Saralangan Rus Tili & 20 ta Ingliz Tili Testlari
+                </div>
+                <h1 class="hero-title">
+                    Bilimingizni <span class="grad-en">Ingliz</span> va <span class="grad-ru">Rus</span> tilida sinab ko'ring!
+                </h1>
+                <p class="hero-subtitle">
+                    Har bir tildan 20 tadan maxsus tuzilgan grammatika, leksika va to'g'ri so'z qo'llash testlarini yeching, o'z bilim darajangizni aniqlang va rasmiy sertifikatga ega bo'ling.
+                </p>
+            </div>
+
+            <!-- Profile and Mode Settings -->
+            <div class="glass-panel user-config-card">
+                <div class="input-group">
+                    <label class="input-label" for="userNameInput">O'quvchi ismi va familiyasi (Sertifikat uchun):</label>
+                    <input type="text" id="userNameInput" class="custom-input" placeholder="Masalan: Ferangiz Karimova" value="Ferangiz">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Sinov rejimi:</label>
+                    <div class="mode-toggle-group">
+                        <div class="mode-option-btn selected" id="modeExamBtn" onclick="app.setTestMode('exam')">
+                            <span class="icon">🎯</span>
+                            <div class="text">
+                                <strong>Imtihon rejimi</strong>
+                                <span>Taymer bilan, natijalar yakunda</span>
+                            </div>
+                        </div>
+                        <div class="mode-option-btn" id="modeStudyBtn" onclick="app.setTestMode('study')">
+                            <span class="icon">💡</span>
+                            <div class="text">
+                                <strong>O'rganish rejimi</strong>
+                                <span>Har bir javobdan so'ng tushuntirish</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject Cards -->
+            <div class="subject-grid">
+                <!-- English Subject Card -->
+                <div class="glass-panel subject-card english" onclick="app.startTest('en')">
+                    <div class="card-header-icon">🇬🇧</div>
+                    <h2 class="subject-title">Ingliz Tili (English)</h2>
+                    <p class="subject-desc">
+                        A1-B1 darajadagi 20 ta qiziqarli test: zamonlar, predloglar, artikllar, frazali fe'llar va kundalik iboralar.
+                    </p>
+                    <ul class="features-list">
+                        <li><span>✓</span> 20 ta sara savol (Grammar & Vocabulary)</li>
+                        <li><span>✓</span> Har bir savolga batafsil o'zbekcha izoh</li>
+                        <li><span>✓</span> 20 daqiqa umumiy vaqt</li>
+                    </ul>
+                    <button class="btn-start-subject">
+                        <span>Ingliz tili testini boshlash</span>
+                        <span>➔</span>
+                    </button>
+                </div>
+
+                <!-- Russian Subject Card -->
+                <div class="glass-panel subject-card russian" onclick="app.startTest('ru')">
+                    <div class="card-header-icon">🇷🇺</div>
+                    <h2 class="subject-title">Rus Tili (Русский язык)</h2>
+                    <p class="subject-desc">
+                        Boshlang'ich va o'rta darajadagi 20 ta test: rodlar, kelishiklar (падежи), fe'llar, predloglar va frazeologizmlar.
+                    </p>
+                    <ul class="features-list">
+                        <li><span>✓</span> 20 ta sara savol (Грамматика и лексика)</li>
+                        <li><span>✓</span> Har bir savolga to'liq qoidali tushuntirish</li>
+                        <li><span>✓</span> 20 daqiqa umumiy vaqt</li>
+                    </ul>
+                    <button class="btn-start-subject">
+                        <span>Rus tili testini boshlash</span>
+                        <span>➔</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mixed Test Option -->
+            <div class="glass-panel mixed-test-banner">
+                <div class="mixed-info">
+                    <h3>🔥 Aralash Sinov (40 ta test)</h3>
+                    <p>Ikkala tilni ham bir paytda sinab ko'rmoqchimisiz? 20 ta Ingliz + 20 ta Rus tili savollarini ketma-ket yeching!</p>
+                </div>
+                <button class="btn-mixed" onclick="app.startTest('mixed')">
+                    Aralash testni boshlash (40 ta) ➔
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ================= 2. QUIZ SCREEN ================= -->
+        <section id="viewQuiz" class="view-section">
+            <div class="glass-panel quiz-top-bar">
+                <div class="quiz-meta">
+                    <div class="subject-badge" id="quizSubjectBadge">🇬🇧 Ingliz Tili</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                        Savol: <strong id="currentQIndexLabel" style="color: var(--text-primary); font-size: 1.1rem;">1</strong> / <span id="totalQCountLabel">20</span>
+                    </div>
+                </div>
+
+                <div class="quiz-meta">
+                    <div class="timer-box" id="quizTimerBox">
+                        <span>⏱️</span>
+                        <span id="timerDisplay">20:00</span>
+                    </div>
+                    <button class="btn-finish-early" onclick="app.confirmFinishEarly()">Yakunlash</button>
+                </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <!-- Question Palette -->
+            <div class="glass-panel palette-container">
+                <div class="palette-header">
+                    <span>Savollar xaritasi:</span>
+                    <span id="answeredCountLabel">0 / 20 javob berildi</span>
+                </div>
+                <div class="palette-grid" id="paletteGrid">
+                    <!-- Palette numbers injected via JS -->
+                </div>
+            </div>
+
+            <!-- Main Question Card -->
+            <div class="glass-panel question-card">
+                <div class="q-number-tag" id="qNumberTag">
+                    <span>SAVOL 1</span> • <span id="qCategoryTag">Grammar</span>
+                </div>
+
+                <h2 class="q-text" id="qQuestionText">
+                    Savol matni yuklanmoqda...
+                </h2>
+
+                <div class="options-list" id="optionsContainer">
+                    <!-- Options injected via JS -->
+                </div>
+
+                <div class="explanation-box" id="explanationBox">
+                    <strong id="explanationTitle">💡 Izoh va Qoida:</strong>
+                    <p id="explanationText"></p>
+                </div>
+
+                <div class="quiz-actions">
+                    <button class="btn-nav" id="btnPrevQ" onclick="app.prevQuestion()">
+                        <span>⬅</span> Oldingi
+                    </button>
+                    
+                    <button class="btn-nav btn-next-action" id="btnNextQ" onclick="app.nextQuestion()">
+                        Keyingi <span>➔</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 3. RESULTS SCREEN ================= -->
+        <section id="viewResults" class="view-section">
+            <div class="results-container">
+                <div class="glass-panel results-hero-card">
+                    <div class="score-circle-wrapper">
+                        <svg class="score-circle-svg" viewBox="0 0 140 140">
+                            <circle class="score-circle-bg" cx="70" cy="70" r="60"></circle>
+                            <circle class="score-circle-fill" id="scoreCircleFill" cx="70" cy="70" r="60"></circle>
+                        </svg>
+                        <div class="score-circle-content">
+                            <div class="num" id="resultPercentText">0%</div>
+                            <div class="label">Natija</div>
+                        </div>
+                    </div>
+
+                    <h2 class="student-honor-title" id="resultStudentTitle">Ajoyib natija, Ferangiz!</h2>
+                    <p class="student-honor-desc" id="resultGradeMessage">
+                        Siz testni muvaffaqiyatli yakunladingiz!
+                    </p>
+
+                    <!-- Stats 4 Card Grid -->
+                    <div class="stats-grid">
+                        <div class="stat-card correct">
+                            <div class="val" id="statCorrect">0</div>
+                            <div class="lbl">To'g'ri javob</div>
+                        </div>
+                        <div class="stat-card wrong">
+                            <div class="val" id="statWrong">0</div>
+                            <div class="lbl">Xato javob</div>
+                        </div>
+                        <div class="stat-card accuracy">
+                            <div class="val" id="statScoreRatio">0/20</div>
+                            <div class="lbl">Umumiy ball</div>
+                        </div>
+                        <div class="stat-card time">
+                            <div class="val" id="statTimeSpent">00:00</div>
+                            <div class="lbl">Sarflangan vaqt</div>
+                        </div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button class="btn-action-primary" onclick="app.openCertificate()">
+                            <span>🎓</span> Rasmiy Sertifikatni Ko'rish
+                        </button>
+                        <button class="btn-action-secondary" onclick="app.restartSameTest()">
+                            <span>🔄</span> Qayta topshirish
+                        </button>
+                        <button class="btn-action-secondary" onclick="app.showHome()">
+                            <span>🏠</span> Bosh sahifaga qaytish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Detailed Answer Review Section -->
+                <div class="review-section">
+                    <div class="review-controls">
+                        <h3>Savollar tahlili va to'g'ri javoblar</h3>
+                        <div class="filter-btn-group">
+                            <button class="filter-btn active" onclick="app.filterReview('all', this)">Barchasi (<span id="countReviewAll">20</span>)</button>
+                            <button class="filter-btn" onclick="app.filterReview('wrong', this)">Xatolar (<span id="countReviewWrong">0</span>)</button>
+                            <button class="filter-btn" onclick="app.filterReview('correct', this)">To'g'ri (<span id="countReviewCorrect">0</span>)</button>
+                        </div>
+                    </div>
+
+                    <div class="review-list" id="reviewListContainer">
+                        <!-- Review cards generated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ================= 4. CERTIFICATE MODAL ================= -->
+    <div class="modal-overlay" id="certificateModal" onclick="if(event.target === this) app.closeCertificate()">
+        <div class="cert-container">
+            <button class="modal-close-btn" onclick="app.closeCertificate()">✕</button>
+
+            <div class="cert-header">
+                <div class="cert-badge">MUVAFFAQIYAT SERTIFIKATI</div>
+                <h2 class="cert-title">CERTIFICATE OF ACHIEVEMENT</h2>
+                <p class="cert-subtitle">Ushbu sertifikat egasining til bilimi muvaffaqiyatli baholanganligini tasdiqlaydi</p>
+            </div>
+
+            <div class="cert-body">
+                <div class="cert-present-to">Taqdim etiladi:</div>
+                <div class="cert-name" id="certStudentName">Ferangiz</div>
+                <p class="cert-statement" id="certStatementText">
+                    <b>Rus tili va Ingliz tili</b> bo'yicha tashkil etilgan maxsus 20 talik sinov testida faol ishtirok etib, yuqori bilim va salohiyatini ko'rsatdi.
+                </p>
+            </div>
+
+            <div class="cert-footer">
+                <div class="cert-meta-item">
+                    <div class="val" id="certDateVal">07.10.2026</div>
+                    <div class="lbl">Sana</div>
+                </div>
+
+                <div class="cert-meta-item center">
+                    <div class="cert-seal">★</div>
+                    <div class="lbl" style="margin-top: 6px;">Tasdiqlangan</div>
+                </div>
+
+                <div class="cert-meta-item right">
+                    <div class="val" id="certScoreVal">95%</div>
+                    <div class="lbl" id="certGradeVal">A'lo Daraja</div>
+                </div>
+            </div>
+
+            <div class="cert-controls">
+                <button class="btn-print" onclick="window.print()">
+                    <span>🖨️</span> Chop etish / PDF saqlash
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        /* ================= 20 ENGLISH QUESTIONS ================= */
+        const englishQuestions = [
+            {
+                id: 1,
+                subject: 'en',
+                category: 'Present Simple',
+                question: "Choose the correct verb form: 'She ________ to school by bus every morning.'",
+                options: ["go", "goes", "is going", "went"],
+                correct: 1,
+                explanation: "Uchinchi shaxs birlikda (She/He/It) Present Simple zamonida fe'lga '-s' yoki '-es' qo'shimchasi qo'shiladi: She goes."
+            },
+            {
+                id: 2,
+                subject: 'en',
+                category: 'Past Simple',
+                question: "Which of the following is the correct irregular past tense of 'buy'?",
+                options: ["buyed", "bought", "brought", "buys"],
+                correct: 1,
+                explanation: "'Buy' (sotib olmoq) noto'g'ri fe'lining o'tgan zamon shakli (V2) 'bought' bo'ladi. ('Brought' esa 'bring' fe'lidan olingan)."
+            },
+            {
+                id: 3,
+                subject: 'en',
+                category: 'Prepositions',
+                question: "We usually have dinner ________ 8 o'clock ________ the evening.",
+                options: ["in / at", "at / in", "on / at", "at / on"],
+                correct: 1,
+                explanation: "Aniq soat vaqtlari oldidan 'at' (at 8 o'clock), kunning qismlari oldidan esa 'in' (in the evening) predlogi ishlatiladi."
+            },
+            {
+                id: 4,
+                subject: 'en',
+                category: 'Present Continuous',
+                question: "Look! The children ________ football in the garden.",
+                options: ["plays", "are playing", "played", "is playing"],
+                correct: 1,
+                explanation: "'Look!' (Qara!) so'zi ayni vaqtda sodir bo'layotgan harakatni bildiradi (Present Continuous). 'Children' ko'plikda bo'lgani uchun 'are playing' to'g'ri."
+            },
+            {
+                id: 5,
+                subject: 'en',
+                category: 'Articles',
+                question: "My father is ________ honest man and he works as ________ engineer.",
+                options: ["a / an", "an / a", "an / an", "the / a"],
+                correct: 2,
+                explanation: "'Honest' so'zi unli tovush bilan boshlanadi (/ˈɒn.ɪst/), shuning uchun 'an honest'. 'Engineer' ham unli bilan boshlangani uchun 'an engineer' ishlatiladi."
+            },
+            {
+                id: 6,
+                subject: 'en',
+                category: 'Modal Verbs',
+                question: "You ________ touch that hot stove! You will burn your hand.",
+                options: ["mustn't", "don't have to", "might", "can"],
+                correct: 0,
+                explanation: "'Mustn't' qat'iy taqiqni bildiradi (tegishing mumkin emas!). 'Don't have to' esa faqat shart emasligini bildiradi."
+            },
+            {
+                id: 7,
+                subject: 'en',
+                category: 'Comparatives',
+                question: "Mount Everest is ________ mountain in the world.",
+                options: ["higher than", "the most high", "the highest", "highest"],
+                correct: 2,
+                explanation: "Bir bo'g'inli sifatlarning orttirma (superlative) darajasida 'the' artikli va '-est' qo'shimchasi olinadi: 'the highest'."
+            },
+            {
+                id: 8,
+                subject: 'en',
+                category: 'Nouns & Plurals',
+                question: "Which of the following plurals is INCORRECT?",
+                options: ["Child -> Children", "Tooth -> Teeth", "Mouse -> Mice", "Person -> Persons"],
+                correct: 3,
+                explanation: "Ingliz tilida 'Person' so'zining odatiy ko'pligi 'People' bo'ladi. 'Persons' faqat rasmiy yuridik hujjatlarda uchraydi."
+            },
+            {
+                id: 9,
+                subject: 'en',
+                category: 'Present Perfect',
+                question: "Have you ever ________ to London before?",
+                options: ["be", "went", "been", "was"],
+                correct: 2,
+                explanation: "Present Perfect zamonida (have/has + V3) biror yerda bo'lib qaytganlikni bildirish uchun 'been' ishlatiladi."
+            },
+            {
+                id: 10,
+                subject: 'en',
+                category: 'Conditionals',
+                question: "If it ________ tomorrow, we will stay at home.",
+                options: ["rains", "will rain", "rained", "is raining"],
+                correct: 0,
+                explanation: "First Conditional qoidasiga ko'ra, 'If' qismida Future Simple o'rniga Present Simple (rains) ishlatiladi."
+            },
+            {
+                id: 11,
+                subject: 'en',
+                category: 'Question Tags',
+                question: "Sarah didn't come to the meeting, ________?",
+                options: ["did she", "didn't she", "does she", "was she"],
+                correct: 0,
+                explanation: "Asosiy jumla inkor bo'lsa (didn't come), question tag qismi tasdiq bo'lishi kerak: 'did she?'."
+            },
+            {
+                id: 12,
+                subject: 'en',
+                category: 'Phrasal Verbs',
+                question: "Never ________ your dreams; keep trying until you succeed!",
+                options: ["give up", "give in", "look up", "take off"],
+                correct: 0,
+                explanation: "'Give up' iboraviy fe'li 'taslim bo'lmoq / voz kechmoq' degan ma'noni anglatadi. 'Never give up' — hechkachon taslim bo'lma!"
+            },
+            {
+                id: 13,
+                subject: 'en',
+                category: 'Vocabulary',
+                question: "What is the synonym of the word 'ANCIENT'?",
+                options: ["Modern", "Very old", "Quick", "Huge"],
+                correct: 1,
+                explanation: "'Ancient' so'zi 'juda qadimiy, juda eski' (very old) degan ma'noni bildiradi."
+            },
+            {
+                id: 14,
+                subject: 'en',
+                category: 'Passive Voice',
+                question: "'Romeo and Juliet' ________ by William Shakespeare.",
+                options: ["wrote", "was written", "is writing", "has written"],
+                correct: 1,
+                explanation: "Majhul nisbat (Past Simple Passive) formulasi: was/were + V3. Asar o'tmishda yozilgani sababli 'was written' to'g'ri."
+            },
+            {
+                id: 15,
+                subject: 'en',
+                category: 'Gerund vs Infinitive',
+                question: "She decided ________ a new language this year.",
+                options: ["learning", "to learn", "learn", "learned"],
+                correct: 1,
+                explanation: "'Decide' fe'lidan keyin infinitiv (to + fe'l) keladi: 'decided to learn'."
+            },
+            {
+                id: 16,
+                subject: 'en',
+                category: 'Prepositions of Place',
+                question: "There is a beautiful painting hanging ________ the wall.",
+                options: ["at", "in", "on", "above"],
+                correct: 2,
+                explanation: "Devor yuzasida bo'lgan narsalar uchun 'on the wall' (devorda) predlogi ishlatiladi."
+            },
+            {
+                id: 17,
+                subject: 'en',
+                category: 'Conjunctions',
+                question: "He went to work ________ he was feeling ill.",
+                options: ["because", "although", "so", "despite"],
+                correct: 1,
+                explanation: "'Although' (garchi ... bo'lsa ham) qarama-qarshi holatni bog'laydi: U o'zini yomon his qilayotgan bo'lsa ham ishga bordi."
+            },
+            {
+                id: 18,
+                subject: 'en',
+                category: 'Relative Pronouns',
+                question: "The woman ________ lives next door is a famous doctor.",
+                options: ["which", "who", "whom", "whose"],
+                correct: 1,
+                explanation: "Insonlarga (shaxslarga) nisbatan nisbiy olmosh sifatida 'who' ishlatiladi."
+            },
+            {
+                id: 19,
+                subject: 'en',
+                category: 'Much vs Many',
+                question: "How ________ information do you have about this project?",
+                options: ["many", "much", "few", "a few"],
+                correct: 1,
+                explanation: "'Information' so'zi sanalmaydigan ot bo'lgani sababli 'much' ishlatiladi: 'How much information'."
+            },
+            {
+                id: 20,
+                subject: 'en',
+                category: 'Idioms',
+                question: "What does the English idiom 'Break a leg!' mean?",
+                options: ["Oyoqni sindirmoq", "Omad tilayman!", "Ehtiyot bo'l!", "Tezroq yugur!"],
+                correct: 1,
+                explanation: "'Break a leg!' ingliz tilidagi mashhur ibora bo'lib, teatr va imtihon oldidan kimgadir 'Omad tilayman!' (Good luck!) ma'nosida aytiladi."
+            }
+        ];
+
+        /* ================= 20 RUSSIAN QUESTIONS ================= */
+        const russianQuestions = [
+            {
+                id: 1,
+                subject: 'ru',
+                category: 'Род имён существительных',
+                question: "Какого рода слово «КОФЕ» в литературном русском языке?",
+                options: ["Женский род", "Мужской род", "Средний род", "Общий род"],
+                correct: 1,
+                explanation: "Adabiy rus tilida «кофе» so'zi muzhskoy rod (мужской род — горячий кофе) hisoblanadi."
+            },
+            {
+                id: 2,
+                subject: 'ru',
+                category: 'Правописание глаголов (-тся / -ться)',
+                question: "В каком предложении пишется «-ТСЯ» (без мягкого знака)?",
+                options: ["Она любит учи...ся", "Мальчик учи...ся в пятом классе", "Не нужно боя...ся", "Пора собира...ся в дорогу"],
+                correct: 1,
+                explanation: "Savol bering: Мальчик (что делает?) учится — 3-shaxs fe'li, shuning uchun 'ь' yozilmaydi (-тся). Qolganlarida (что делать?) учиться — noaniq shakl (-ться)."
+            },
+            {
+                id: 3,
+                subject: 'ru',
+                category: 'Родительный падеж',
+                question: "Вставьте правильное окончание: «У меня сегодня нет свободного ________».",
+                options: ["время", "времени", "временем", "времена"],
+                correct: 1,
+                explanation: "«Время» so'zi -мя ga tugovchi разносклоняемое ot bo'lib, Roditelniy padejda (нет чего?) «времени» shakliga ega bo'ladi."
+            },
+            {
+                id: 4,
+                subject: 'ru',
+                category: 'Дательный падеж',
+                question: "Выберите правильную форму: «Я позвонил своему лучшему ________».",
+                options: ["друга", "другу", "другом", "друге"],
+                correct: 1,
+                explanation: "Позвонить (кому?) — Dativ (Дательный падеж). Muzhskoy rodda qo'shimcha -у bo'ladi: другу."
+            },
+            {
+                id: 5,
+                subject: 'ru',
+                category: 'Глаголы движения',
+                question: "Выберите правильный глагол: «Каждое воскресенье мы ________ в бассейн».",
+                options: ["идём", "ходим", "пойдём", "пошли"],
+                correct: 1,
+                explanation: "Muntazam takrorlanadigan, ikki tomonga harakat (har yakshanba) uchun ko'p yo'nalishli «ходить» fe'li ishlatiladi: мы ходим."
+            },
+            {
+                id: 6,
+                subject: 'ru',
+                category: 'Творительный падеж',
+                question: "Определите правильную форму: «Мы гордимся нашей великой ________».",
+                options: ["страна", "страны", "страной", "стране"],
+                correct: 2,
+                explanation: "Гордиться (кем? чем?) — Tvoritelniy padej (Творительный падеж). Zhenskiy rodda qo'shimcha -ой bo'ladi: страной."
+            },
+            {
+                id: 7,
+                subject: 'ru',
+                category: 'Правописание приставок',
+                question: "В каком слове пишется буква «З» в начале слова?",
+                options: ["...делать", "...дание", "...бегать", "...гореть"],
+                correct: 1,
+                explanation: "Rus tilida 'З' pristavkasi yo'q (сделать, сбежать, сгореть). Ammo «здание, здесь, здоровье» so'zlarida 'з' harfi o'zakning bir qismidir."
+            },
+            {
+                id: 8,
+                subject: 'ru',
+                category: 'Спряжение глаголов',
+                question: "Какой из следующих глаголов относится ко II спряжению (исключение)?",
+                options: ["Читать", "Гулять", "Видеть", "Петь"],
+                correct: 2,
+                explanation: "«Гнать, дышать, держать, обидеть, слышать, видеть, ненавидеть, зависеть, терпеть, смотреть, вертеть» — bular II-tuslanishdagi istisno fe'llardir."
+            },
+            {
+                id: 9,
+                subject: 'ru',
+                category: 'Предлоги (В / НА, ИЗ / С)',
+                question: "Заполните пропуск: «Ученик вернулся ________ школы в два часа».",
+                options: ["с", "из", "от", "со"],
+                correct: 1,
+                explanation: "«В школу» jufti «ИЗ школы» bo'ladi (В <-> ИЗ). «На работу» bo'lsa «С работы» bo'lar edi (НА <-> С)."
+            },
+            {
+                id: 10,
+                subject: 'ru',
+                category: 'Правописание НЕ',
+                question: "В каком случае «НЕ» с глаголом пишется СЛИТНО (birga)?",
+                options: ["(не)знает", "(не)хочет", "(не)навидит", "(не)может"],
+                correct: 2,
+                explanation: "Fe'llar bilan «не» odatda alohida yoziladi, lekin «не»siz ishlatilmaydigan so'zlar birga yoziladi: «ненавидеть, негодовать»."
+            },
+            {
+                id: 11,
+                subject: 'ru',
+                category: 'Числительные',
+                question: "Выберите грамматически верное сочетание с числительным:",
+                options: ["Двадцать два учеников", "Двадцать два ученика", "Двадцать две учеников", "Двадцать два ученики"],
+                correct: 1,
+                explanation: "Oxiri 2, 3, 4 bilan tugaydigan murakkab sonlardan keyin ot Roditelniy padej birlikda keladi: двадцать два (кого?) ученика."
+            },
+            {
+                id: 12,
+                subject: 'ru',
+                category: 'Культура речи (Одеть / Надеть)',
+                question: "Какое предложение составлено ГРАММАТИЧЕСКИ ПРАВИЛЬНО?",
+                options: [
+                    "Утром мама одела пальто и пошла на работу.",
+                    "Утром мама надела пальто и пошла на работу.",
+                    "Я одел шапку, потому что холодно.",
+                    "Одень на себя куртку!"
+                ],
+                correct: 1,
+                explanation: "Oltin qoida: «Одевают Надежду, надевают одежду». O'ziga yoki narsani kiyganda «надеть» (надеть пальто), boshqa odamni kiyintirganda «одеть» (одеть ребёнка) ishlatiladi."
+            },
+            {
+                id: 13,
+                subject: 'ru',
+                category: 'Фразеологизмы',
+                question: "Что означает фразеологизм «БИТЬ БАКЛУШИ»?",
+                options: ["Тяжело работать", "Бездельничать (bekorchilik qilmoq)", "Громко петь", "Драться"],
+                correct: 1,
+                explanation: "«Бить баклуши» frazeologizmi rus tilida 'hech narsa qilmaslik, vaqtni bekor o'tkazish' (бездельничать) ma'nosini bildiradi."
+            },
+            {
+                id: 14,
+                subject: 'ru',
+                category: 'Множественное число',
+                question: "Какая форма множественного числа родительного падежа верна?",
+                options: ["Много яблоков", "Много яблок", "Много яблока", "Много яблоковъ"],
+                correct: 1,
+                explanation: "«Яблоко» so'zining ko'plikdagi Roditelniy shakli: много (чего?) «яблок» bo'ladi."
+            },
+            {
+                id: 15,
+                subject: 'ru',
+                category: 'Синонимы',
+                question: "Какое слово является синонимом к слову «ЛАКОНИЧНЫЙ»?",
+                options: ["Длинный", "Краткий (qisqa, lo'nda)", "Сложный", "Красивый"],
+                correct: 1,
+                explanation: "«Лаконичный» — qisqa, aniq va lo'nda bayon qilingan degan ma'noni beradi (синоним: краткий, немногословный)."
+            },
+            {
+                id: 16,
+                subject: 'ru',
+                category: 'Правописание безударных гласных',
+                question: "В каком слове пропущена буква «И» в корне слова?",
+                options: ["Прим...рять ссорящихся друзей", "Прим...рять новое платье", "Посв...тить фонариком", "Оч...ровать"],
+                correct: 0,
+                explanation: "Примирять — tekshiruvchi so'z «мир» (tinchlik), shuning uchun 'и'. Kiyim kiyib ko'rishda esa примерять — «примерка» ('е')."
+            },
+            {
+                id: 17,
+                subject: 'ru',
+                category: 'Степени сравнения',
+                question: "Какая форма сравнительной степени прилагательного верна?",
+                options: ["Более красивее", "Красивее", "Самый красивейший", "Более лучший"],
+                correct: 1,
+                explanation: "«Более» so'zi bilan oddiy sifat qo'shiladi (более красивый) yoki faqat qo'shimcha olinadi (красивее). «Более красивее» — qo'pol xatodir."
+            },
+            {
+                id: 18,
+                subject: 'ru',
+                category: 'Местоимения',
+                question: "Вставьте правильное местоимение: «Она взяла с ________ зонт».",
+                options: ["ей", "собой", "нею", "ней"],
+                correct: 1,
+                explanation: "Harakat sub'ektining o'ziga tegishli ekanligini ifodalashda o'zlik olmoshi «себя» (взять с собой) ishlatiladi."
+            },
+            {
+                id: 19,
+                subject: 'ru',
+                category: 'Сложные предложения',
+                question: "Перед каким союзом в сложном предложении ВСЕГДА ставится запятая?",
+                options: ["и", "что", "или", "да"],
+                correct: 1,
+                explanation: "Ergashgan qo'shma gaplarda «что, чтобы, потому что» kabi ergash bog'lovchilari oldidan doimo vergul qo'yiladi."
+            },
+            {
+                id: 20,
+                subject: 'ru',
+                category: 'Фразеологизмы',
+                question: "Что означает выражение «КОТ НАПЛАКАЛ»?",
+                options: ["Очень много", "Очень мало (juda oz)", "Очень грустно", "Быстро"],
+                correct: 1,
+                explanation: "«Кот наплакал» — barmoq bilan sanarli darajada juda oz, kam (очень мало) degan ma'noni anglatadi."
+            }
+        ];
+
+        /* ================= WEB AUDIO API SOUND SYSTEM ================= */
+        class SoundFX {
+            constructor() {
+                this.ctx = null;
+                this.enabled = true;
+            }
+
+            init() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    if (AudioCtx) this.ctx = new AudioCtx();
+                }
+            }
+
+            playCorrect() {
+                if (!this.enabled) return;
+                this.init();
+                if (!this.ctx) return;
+
+                const now = this.ctx.currentTime;
+                const osc1 = this.ctx.createOscillator();
+                const osc2 = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+
+                osc1.type = 'sine';
+                osc2.type = 'triangle';
+
+                osc1.frequency.setValueAtTime(523.25, now); // C5
+                osc1.frequency.exponentialRampToValueAtTime(659.25, now + 0.1); // E5
+                osc1.frequency.exponentialRampToValueAtTime(783.99, now + 0.2); // G5
+
+                osc2.frequency.setValueAtTime(261.63, now);
+                osc2.frequency.exponentialRampToValueAtTime(392.00, now + 0.2);
+
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+
+                osc1.connect(gain);
+                osc2.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc1.start(now);
+                osc2.start(now);
+                osc1.stop(now + 0.35);
+                osc2.stop(now + 0.35);
+            }
+
+            playWrong() {
+                if (!this.enabled) return;
+                this.init();
+                if (!this.ctx) return;
+
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(180, now);
+                osc.frequency.exponentialRampToValueAtTime(110, now + 0.28);
+
+                gain.gain.setValueAtTime(0.18, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.3);
+            }
+
+            playClick() {
+                if (!this.enabled) return;
+                this.init();
+                if (!this.ctx) return;
+
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, now);
+                osc.frequency.exponentialRampToValueAtTime(400, now + 0.05);
+
+                gain.gain.setValueAtTime(0.08, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.05);
+            }
+        }
+
+        /* ================= APP CORE CONTROLLER ================= */
+        class QuizApp {
+            constructor() {
+                this.sound = new SoundFX();
+                this.testMode = 'exam'; // 'exam' or 'study'
+                this.currentSubject = 'en'; // 'en', 'ru', 'mixed'
+                this.questions = [];
+                this.currentIndex = 0;
+                this.userAnswers = {}; // { qIndex: selectedOptionIndex }
+                this.studentName = "Ferangiz";
+                
+                // Timer
+                this.timerSeconds = 20 * 60; // 20 mins
+                this.timerInterval = null;
+                this.timeSpentSeconds = 0;
+
+                this.init();
+            }
+
+            init() {
+                // Check saved theme
+                const savedTheme = localStorage.getItem('test_theme') || 'dark';
+                if (savedTheme === 'light') {
+                    document.body.classList.add('light-theme');
+                    document.getElementById('themeIcon').textContent = '☀️';
+                }
+            }
+
+            toggleTheme() {
+                this.sound.playClick();
+                const isLight = document.body.classList.toggle('light-theme');
+                document.getElementById('themeIcon').textContent = isLight ? '☀️' : '🌙';
+                localStorage.setItem('test_theme', isLight ? 'light' : 'dark');
+            }
+
+            toggleSound() {
+                this.sound.enabled = !this.sound.enabled;
+                document.getElementById('soundIcon').textContent = this.sound.enabled ? '🔊' : '🔇';
+            }
+
+            setTestMode(mode) {
+                this.sound.playClick();
+                this.testMode = mode;
+                document.getElementById('modeExamBtn').classList.toggle('selected', mode === 'exam');
+                document.getElementById('modeStudyBtn').classList.toggle('selected', mode === 'study');
+            }
+
+            showHome() {
+                this.sound.playClick();
+                if (this.timerInterval) clearInterval(this.timerInterval);
+                this.switchView('viewHome');
+            }
+
+            switchView(viewId) {
+                document.querySelectorAll('.view-section').forEach(sec => sec.classList.remove('active'));
+                const target = document.getElementById(viewId);
+                if (target) target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            startTest(subject) {
+                this.sound.playClick();
+                const nameInput = document.getElementById('userNameInput').value.trim();
+                this.studentName = nameInput || "Ferangiz";
+                this.currentSubject = subject;
+
+                if (subject === 'en') {
+                    this.questions = JSON.parse(JSON.stringify(englishQuestions));
+                    this.timerSeconds = 20 * 60;
+                } else if (subject === 'ru') {
+                    this.questions = JSON.parse(JSON.stringify(russianQuestions));
+                    this.timerSeconds = 20 * 60;
+                } else {
+                    // Mixed 40 questions
+                    this.questions = [
+                        ...JSON.parse(JSON.stringify(englishQuestions)),
+                        ...JSON.parse(JSON.stringify(russianQuestions))
+                    ];
+                    this.timerSeconds = 35 * 60;
+                }
+
+                this.currentIndex = 0;
+                this.userAnswers = {};
+                this.timeSpentSeconds = 0;
+
+                // Update UI badge
+                const badge = document.getElementById('quizSubjectBadge');
+                badge.className = 'subject-badge ' + (subject === 'en' ? 'en' : subject === 'ru' ? 'ru' : 'mixed');
+                badge.innerHTML = subject === 'en' ? '🇬🇧 Ingliz Tili' : subject === 'ru' ? '🇷🇺 Rus Tili' : '🌐 Aralash Test';
+
+                document.getElementById('totalQCountLabel').textContent = this.questions.length;
+
+                this.renderPalette();
+                this.loadQuestion(0);
+                this.startTimer();
+                this.switchView('viewQuiz');
+            }
+
+            startTimer() {
+                if (this.timerInterval) clearInterval(this.timerInterval);
+                this.updateTimerDisplay();
+
+                this.timerInterval = setInterval(() => {
+                    this.timerSeconds--;
+                    this.timeSpentSeconds++;
+                    this.updateTimerDisplay();
+
+                    if (this.timerSeconds <= 0) {
+                        clearInterval(this.timerInterval);
+                        alert("Vaqt tugadi! Test yakunlanmoqda.");
+                        this.finishQuiz();
+                    }
+                }, 1000);
+            }
+
+            updateTimerDisplay() {
+                const min = Math.floor(this.timerSeconds / 60);
+                const sec = this.timerSeconds % 60;
+                const formatted = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+                const disp = document.getElementById('timerDisplay');
+                disp.textContent = formatted;
+
+                const timerBox = document.getElementById('quizTimerBox');
+                if (this.timerSeconds < 180) { // Under 3 mins
+                    timerBox.classList.add('warning');
+                } else {
+                    timerBox.classList.remove('warning');
+                }
+            }
+
+            renderPalette() {
+                const container = document.getElementById('paletteGrid');
+                container.innerHTML = '';
+
+                this.questions.forEach((q, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'pal-btn';
+                    btn.id = `palBtn_${idx}`;
+                    btn.textContent = idx + 1;
+                    btn.onclick = () => {
+                        this.sound.playClick();
+                        this.loadQuestion(idx);
+                    };
+                    container.appendChild(btn);
+                });
+
+                this.updatePaletteState();
+            }
+
+            updatePaletteState() {
+                this.questions.forEach((q, idx) => {
+                    const btn = document.getElementById(`palBtn_${idx}`);
+                    if (!btn) return;
+
+                    btn.classList.toggle('active', idx === this.currentIndex);
+
+                    const isAnswered = this.userAnswers.hasOwnProperty(idx);
+                    if (this.testMode === 'study' && isAnswered) {
+                        const isCorrect = this.userAnswers[idx] === q.correct;
+                        btn.classList.toggle('correct', isCorrect);
+                        btn.classList.toggle('wrong', !isCorrect);
+                    } else {
+                        btn.classList.toggle('answered', isAnswered);
+                    }
+                });
+
+                // Update answered count
+                const answeredCount = Object.keys(this.userAnswers).length;
+                document.getElementById('answeredCountLabel').textContent = 
+                    `${answeredCount} / ${this.questions.length} javob berildi`;
+
+                // Update progress bar
+                const percent = (answeredCount / this.questions.length) * 100;
+                document.getElementById('progressBar').style.width = `${percent}%`;
+            }
+
+            loadQuestion(idx) {
+                if (idx < 0 || idx >= this.questions.length) return;
+                this.currentIndex = idx;
+
+                const q = this.questions[idx];
+                document.getElementById('currentQIndexLabel').textContent = idx + 1;
+                document.getElementById('qNumberTag').innerHTML = `<span>SAVOL ${idx + 1}</span> • <span id="qCategoryTag">${q.category || (q.subject === 'en' ? 'English' : 'Russian')}</span>`;
+                document.getElementById('qQuestionText').textContent = q.question;
+
+                // Render options
+                const container = document.getElementById('optionsContainer');
+                container.innerHTML = '';
+
+                const letters = ['A', 'B', 'C', 'D'];
+                const selectedOpt = this.userAnswers[idx];
+                const isAnswered = selectedOpt !== undefined;
+
+                q.options.forEach((optText, oIdx) => {
+                    const item = document.createElement('div');
+                    item.className = 'option-item';
+                    
+                    if (isAnswered) {
+                        if (this.testMode === 'study') {
+                            item.classList.add('locked');
+                            if (oIdx === q.correct) item.classList.add('correct');
+                            else if (oIdx === selectedOpt) item.classList.add('wrong');
+                        } else {
+                            if (oIdx === selectedOpt) item.classList.add('selected');
+                        }
+                    }
+
+                    item.innerHTML = `
+                        <div class="option-letter">${letters[oIdx]}</div>
+                        <div class="option-text">${optText}</div>
+                    `;
+
+                    item.onclick = () => {
+                        this.selectOption(oIdx);
+                    };
+
+                    container.appendChild(item);
+                });
+
+                // Explanation handling
+                const explBox = document.getElementById('explanationBox');
+                if (this.testMode === 'study' && isAnswered) {
+                    explBox.classList.add('visible');
+                    document.getElementById('explanationText').textContent = q.explanation;
+                } else {
+                    explBox.classList.remove('visible');
+                }
+
+                // Prev / Next button states
+                document.getElementById('btnPrevQ').disabled = (idx === 0);
+                const nextBtn = document.getElementById('btnNextQ');
+                if (idx === this.questions.length - 1) {
+                    nextBtn.innerHTML = `Natijani ko'rish <span>✓</span>`;
+                } else {
+                    nextBtn.innerHTML = `Keyingi <span>➔</span>`;
+                }
+
+                this.updatePaletteState();
+            }
+
+            selectOption(optIdx) {
+                const q = this.questions[this.currentIndex];
+
+                // If study mode and already answered, don't re-select
+                if (this.testMode === 'study' && this.userAnswers.hasOwnProperty(this.currentIndex)) {
+                    return;
+                }
+
+                this.userAnswers[this.currentIndex] = optIdx;
+
+                if (this.testMode === 'study') {
+                    if (optIdx === q.correct) {
+                        this.sound.playCorrect();
+                    } else {
+                        this.sound.playWrong();
+                    }
+                } else {
+                    this.sound.playClick();
+                }
+
+                this.loadQuestion(this.currentIndex);
+            }
+
+            prevQuestion() {
+                this.sound.playClick();
+                if (this.currentIndex > 0) {
+                    this.loadQuestion(this.currentIndex - 1);
+                }
+            }
+
+            nextQuestion() {
+                this.sound.playClick();
+                if (this.currentIndex < this.questions.length - 1) {
+                    this.loadQuestion(this.currentIndex + 1);
+                } else {
+                    this.confirmFinishEarly();
+                }
+            }
+
+            confirmFinishEarly() {
+                const answered = Object.keys(this.userAnswers).length;
+                const total = this.questions.length;
+                const unanswered = total - answered;
+
+                let msg = "Testni yakunlashni xohlaysizmi?";
+                if (unanswered > 0) {
+                    msg = `Sizda hali ${unanswered} ta savolga javob berilmagan! Testni yakunlaysizmi?`;
+                }
+
+                if (confirm(msg)) {
+                    this.finishQuiz();
+                }
+            }
+
+            finishQuiz() {
+                if (this.timerInterval) clearInterval(this.timerInterval);
+                this.sound.playCorrect();
+
+                let correctCount = 0;
+                let wrongCount = 0;
+
+                this.questions.forEach((q, idx) => {
+                    const ans = this.userAnswers[idx];
+                    if (ans === q.correct) {
+                        correctCount++;
+                    } else {
+                        wrongCount++;
+                    }
+                });
+
+                const total = this.questions.length;
+                const scorePercent = Math.round((correctCount / total) * 100);
+
+                // Stats in Results
+                document.getElementById('statCorrect').textContent = correctCount;
+                document.getElementById('statWrong').textContent = wrongCount;
+                document.getElementById('statScoreRatio').textContent = `${correctCount}/${total}`;
+                
+                const minSpent = Math.floor(this.timeSpentSeconds / 60);
+                const secSpent = this.timeSpentSeconds % 60;
+                document.getElementById('statTimeSpent').textContent = 
+                    `${String(minSpent).padStart(2, '0')}:${String(secSpent).padStart(2, '0')}`;
+
+                document.getElementById('resultPercentText').textContent = `${scorePercent}%`;
+                document.getElementById('resultStudentTitle').textContent = `Ajoyib natija, ${this.studentName}!`;
+
+                // Grade evaluation
+                let gradeText = "";
+                let gradeCert = "";
+                if (scorePercent >= 90) {
+                    gradeText = "🏆 Mukammal! Siz ushbu tilda juda mustahkam bilimga egasiz!";
+                    gradeCert = "A'lo Daraja (A+)";
+                } else if (scorePercent >= 75) {
+                    gradeText = "🌟 Juda yaxshi natija! Grammatika va lug'at boyligingiz a'lo darajada.";
+                    gradeCert = "Yaxshi Daraja (B+)";
+                } else if (scorePercent >= 50) {
+                    gradeText = "👍 Qoniqarli! Kamchiliklar ustida ishlab bilimingizni yanada oshirishingiz mumkin.";
+                    gradeCert = "Qoniqarli Daraja (C)";
+                } else {
+                    gradeText = "📚 Ko'proq mashq qilish tavsiya etiladi. Qayta urinib ko'ring!";
+                    gradeCert = "Boshlang'ich Daraja";
+                }
+                document.getElementById('resultGradeMessage').textContent = gradeText;
+
+                // Animate circle SVG
+                const fillCircle = document.getElementById('scoreCircleFill');
+                const circumference = 2 * Math.PI * 60; // ~377
+                const offset = circumference - (scorePercent / 100) * circumference;
+                setTimeout(() => {
+                    fillCircle.style.strokeDashoffset = offset;
+                }, 100);
+
+                // Setup Certificate data
+                document.getElementById('certStudentName').textContent = this.studentName;
+                document.getElementById('certScoreVal').textContent = `${scorePercent}%`;
+                document.getElementById('certGradeVal').textContent = gradeCert;
+
+                const today = new Date();
+                const dateStr = today.toLocaleDateString('uz-UZ', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                document.getElementById('certDateVal').textContent = dateStr;
+
+                const subjName = this.currentSubject === 'en' ? 'Ingliz tili' : this.currentSubject === 'ru' ? 'Rus tili' : 'Rus tili va Ingliz tili';
+                document.getElementById('certStatementText').innerHTML = 
+                    `<b>${subjName}</b> bo'yicha tashkil etilgan maxsus ${total} talik sinov testida muvaffaqiyatli ishtirok etib, <b>${scorePercent}%</b> ball bilan <b>${gradeCert}</b> sohibi bo'ldi.`;
+
+                // Render review list
+                this.renderReviewList('all');
+
+                this.switchView('viewResults');
+            }
+
+            renderReviewList(filter) {
+                const container = document.getElementById('reviewListContainer');
+                container.innerHTML = '';
+
+                let totalCount = this.questions.length;
+                let correctCount = 0;
+                let wrongCount = 0;
+
+                this.questions.forEach((q, idx) => {
+                    const userAns = this.userAnswers[idx];
+                    const isCorrect = (userAns === q.correct);
+
+                    if (isCorrect) correctCount++;
+                    else wrongCount++;
+
+                    if (filter === 'correct' && !isCorrect) return;
+                    if (filter === 'wrong' && isCorrect) return;
+
+                    const letters = ['A', 'B', 'C', 'D'];
+                    const card = document.createElement('div');
+                    card.className = `review-card ${isCorrect ? 'is-correct' : 'is-wrong'}`;
+
+                    const userChoiceText = userAns !== undefined ? `${letters[userAns]}) ${q.options[userAns]}` : "Javob berilmagan";
+                    const correctChoiceText = `${letters[q.correct]}) ${q.options[q.correct]}`;
+
+                    card.innerHTML = `
+                        <div class="rq-head">
+                            <span>Savol ${idx + 1} • ${q.category || 'Til qoidasi'}</span>
+                            <span style="font-weight: 700; color: ${isCorrect ? 'var(--success)' : 'var(--danger)'};">
+                                ${isCorrect ? '✓ To\'g\'ri' : '✕ Xato'}
+                            </span>
+                        </div>
+                        <div class="rq-text">${q.question}</div>
+
+                        <div class="review-answer-pill user-ans ${isCorrect ? 'correct' : ''}">
+                            <strong>Sizning javobingiz:</strong> ${userChoiceText}
+                        </div>
+
+                        ${!isCorrect ? `
+                        <div class="review-answer-pill correct-ans">
+                            <strong>To'g'ri javob:</strong> ${correctChoiceText}
+                        </div>
+                        ` : ''}
+
+                        <div class="review-expl">
+                            <strong>💡 Qoida va Izoh:</strong> ${q.explanation}
+                        </div>
+                    `;
+
+                    container.appendChild(card);
+                });
+
+                document.getElementById('countReviewAll').textContent = totalCount;
+                document.getElementById('countReviewWrong').textContent = wrongCount;
+                document.getElementById('countReviewCorrect').textContent = correctCount;
+            }
+
+            filterReview(filter, btn) {
+                this.sound.playClick();
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                if (btn) btn.classList.add('active');
+                this.renderReviewList(filter);
+            }
+
+            restartSameTest() {
+                this.sound.playClick();
+                this.startTest(this.currentSubject);
+            }
+
+            openCertificate() {
+                this.sound.playClick();
+                document.getElementById('certificateModal').classList.add('active');
+            }
+
+            closeCertificate() {
+                this.sound.playClick();
+                document.getElementById('certificateModal').classList.remove('active');
+            }
+        }
+
+        // Initialize App on DOM load
+        let app;
+        window.addEventListener('DOMContentLoaded', () => {
+            app = new QuizApp();
+        });
+    </script>
+</body>
+</html>
